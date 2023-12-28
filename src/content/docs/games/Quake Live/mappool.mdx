@@ -1,0 +1,44 @@
+---
+title: Quake Live Map Pool
+description: Learn how to setup a map pool for your Quake Live server.
+sidebar:
+  label: Map Pool
+---
+
+A crucial part of customizing your Quake Live server on Game Host Bros is setting up a specific map pool. This guide explains how to configure your map pool and, if desired, lock your server to a single gametype.
+
+## Accessing The mappool.txt File
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Select your Quake 3 Arena server.
+3. In the sidebar click on `Management > File Manager`.
+4. Select the `baseq3` folder.
+5. Open the `mappool.txt` file.
+
+By default there are some pre-configured mappool files for you to use. They can be changed by setting `Map Pool` in `Configuration > Startup Parameters` to one of the files below.
+
+| Game Mode     | Config                                |
+|---------------|---------------------------------------|
+| Default | mappool.txt |
+| FFA | mappool_ffa.txt |
+| Clan Arena | mappool_ca.txt |
+| Capture the Flag | mappool_ctf.txt |
+| Duel | mappool_duel.txt |
+| Race | mappool_race.txt |
+| Team Deathmatch | mappool_tdm.txt |
+
+## Understanding Map Pool Entries
+
+The `mappool.txt` file determines the maps available for play on the server.
+
+- Entries follow the format: `map|factory`
+    - 'map' refers to the map name.
+    - 'factory' refers to the game type or rule set for that map.
+
+Ensure each `map|factory` pair is on its own line. Refer to the default 'mappool.txt' provided for examples. If you're using custom factories (custom game settings/rules), specify them in the 'mappool.txt' file. Properly configured, these will appear in the map voting system at each game’s end.
+
+You can specify a different map pool file by setting `Map Pool` in `Configuration > Startup Parameters` to the path of your custom map pool file. Simply make a copy of the default map pool file and rename it.
+
+## Locking Server to a Single Gametype
+
+If you prefer to keep your server dedicated to one game type (e.g., Duel), ensure your 'mappool.txt' contains only maps from the desired factory. Add `8` to `g_voteFlags` in your `server.cfg` file. This adjustment disables the "callvote map" option's factory argument, locking in the gametype.

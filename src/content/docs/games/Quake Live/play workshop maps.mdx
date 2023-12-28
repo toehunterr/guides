@@ -1,0 +1,31 @@
+---
+title: Quake Live Play Workshop Maps
+description: Learn how to play workshop maps with friends on your Quake Live server.
+sidebar:
+  label: Play Workshop Maps
+---
+
+Since Quake Live doesn't support FastDL, you are required to use the Steam Workshop for downloading content. The benefit of this is your server and players will always have the same content.
+
+For this example, we will be adding this map to our server: [Workshop Map](https://steamcommunity.com/sharedfiles/filedetails/?id=3031845623)
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Click on your Quake Live server.
+3. In the sidebar click on `Management > File Manager`.
+4. Select the `baseq3` folder.
+5. Open the `workshop.txt` file.
+
+Once you open that file, this is where we put in the ID of the workshop items we need to add. The ID can be found at the end of the URL and is a bunch of numbers. You can add 1 ID per line.
+
+Here is an example adding our map from above.
+
+```bash title="workshop.txt"
+# specify 1 workshop item id per line, ex:
+# 494372396
+# 441344649
+3031845623
+```
+
+Save the file and then restart your server. You should then see the content start downloading. This will only happen once, unless the file gets updated by the author. After that, you can simply edit your `mappool.txt` with the map name and factory.
+
+The map names can be found in `steamapps/workshop/content` and then by going into the workshop ID folder.

@@ -1,0 +1,94 @@
+---
+title: Q3 Arena Mapcycle
+description: Learn how to setup a mapcycle file to your Quake 3 Arena server.
+sidebar:
+  label: Mapcycle
+---
+
+By default, base Quake 3 Arena doesn't support a map cycle file, however you can do a workaround to get the same effect with scripting.
+
+It's worth noting that **some mods such as OSP will automatically add all the maps** from the server that support your current game mode. **We recommend you install the OSP mod directly from our Mod Manager** to make it easier for you to manage your maps. This will also make dealing with custom maps easier and you can simply upload them.
+
+## How To Modify the Map Cycle
+
+We include a base `level.txt` in `.q3a/baseq3/levels.cfg` by default on our servers that you can easily modify.
+
+You can change what map config it reads by going to your server, `Startup Parameters` and changing `Exec/Gamemode`. If you leave this as `levels.cfg` and load a mod, it will use this map list. We suggest removing levels.cfg from Exec/Gamemode and using some of the configs inbuilt with your mod (for example OSP will select all the maps for that game mod) or creating your own custom map list based on the mode you're playing.
+
+The default file looks like this.
+
+```bash title="levels.cfg"
+set map1 "map q3ctf4; set nextmap vstr map2"
+set map2 "map q3ctf3; set nextmap vstr map3"
+set map3 "map q3ctf2; set nextmap vstr map4"
+set map4 "map q3ctf1; set nextmap vstr map1"
+vstr map1
+```
+
+## How Does It Work?
+Setting Up Steps: Think of each set command as a step in a set of instructions. It's like saying, "First, do this, then do that."
+
+For example:
+
+`set map1 "map q3ctf4; set nextmap vstr map2"`
+
+This is like saying, "Step 1: Play the game on the 'q3ctf4' map. After that, move to Step 2". Looping at the end of our steps, we tell it to go back to the start. This way, the game keeps cycling through the maps without stopping. In short, this script is like a playlist for game maps.
+
+Here is an example the ffa maps q3ctf4, q3ctf3, q3ctf2, q3ctf1. It will cycle through the list until it hits the end.
+
+```bash title="ffa-levels.cfg"
+set map1 "map q3dm1; set nextmap vstr map2"
+set map2 "map q3dm2; set nextmap vstr map3"
+set map3 "map q3dm3; set nextmap vstr map4"
+set map4 "map q3dm4; set nextmap vstr map5"
+set map5 "map q3dm5; set nextmap vstr map6"
+set map6 "map q3dm6; set nextmap vstr map7"
+set map7 "map q3dm7; set nextmap vstr map8"
+set map8 "map q3dm8; set nextmap vstr map9"
+set map9 "map q3dm9; set nextmap vstr map10"
+set map10 "map q3dm10; set nextmap vstr map11"
+set map11 "map q3dm11; set nextmap vstr map12"
+set map12 "map q3dm12; set nextmap vstr map13"
+set map13 "map q3dm13; set nextmap vstr map14"
+set map14 "map q3dm14; set nextmap vstr map15"
+set map15 "map q3dm15; set nextmap vstr map16"
+set map16 "map q3dm16; set nextmap vstr map17"
+set map17 "map q3dm17; set nextmap vstr map18"
+set map18 "map q3dm18; set nextmap vstr map19"
+set map19 "map q3dm19; set nextmap vstr map1"
+vstr map1
+```
+
+## Full Quake 3 Arena Map List
+Here is a list of all the default map names, so you can create your own custom `levels.cfg`
+
+- q3dm0 - Introduction
+- q3dm1 - Arena Gate
+- q3dm2 - House of Pain
+- q3dm3 - Arena of Death
+- q3dm4 - The Place of Many Deaths
+- q3dm5 - The Forgotten Place
+- q3dm6 - The Camping Grounds
+- q3dm7 - Temple of Retribution
+- q3dm8 - Brimstone Abbey
+- q3dm9 - Hero's Keep
+- q3dm10 - The Nameless Place
+- q3dm11 - Deva Station
+- q3dm12 - The Dredwerkz
+- q3dm13 - Lost World
+- q3dm14 - Grim Dungeons
+- q3dm15 - Demon Keep
+- q3dm16 - The Bouncy Map
+- q3dm17 - The Longest Yard
+- q3dm18 - Space Chamber
+- q3dm19 - Apocalypse Void
+- q3tourney1 - Powerstation 0218
+- q3tourney2 - The Proving Grounds
+- q3tourney3 - Hell's Gate
+- q3tourney4 - Vertical Vengeance
+- q3tourney5 - Fatal Instinct
+- q3tourney6 - The Very End of You
+- q3ctf1 - Dueling Keeps
+- q3ctf2 - Troubled Waters
+- q3ctf3 - The Stronghold
+- q3ctf4 - Speedtrap

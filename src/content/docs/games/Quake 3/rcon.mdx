@@ -1,0 +1,36 @@
+---
+title: Q3 RCON
+description: Learn how to use RCON on your Quake 3 Arena server.
+sidebar:
+  label: RCON
+---
+
+This guide provides step-by-step instructions on how to set up and manage your Quake 3 Arena server using RCON.
+
+## Enabling RCON
+
+By default, Quake 3 Arena servers have remote administration turned off so you need to activate it. You can do this by setting an RCON password.
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. In the console type `\seta rconpassword "your_password"`.
+
+## Sending RCON Commands From In Game
+
+There are a few ways you can send commands to the server using RCON.
+
+1. Sending the password with each remote command, for example:
+`\rcon "your_password" status`
+
+2. You can also set the `rconpassword` on your client, similar to the server setup. Subsequent commands can omit the password, for example:
+`\rcon status`
+
+3. To manage a server without connecting to it, players should set the `rconaddress` variable to the server's IP address.
+
+## RCON Commands
+
+With remote access configured, players can now issue various commands to manage the server effectively. Some of the essential commands include:
+
+- Changing the map - `\rcon map "map_name"`
+- Removing a player from the server - `\rcon kick "user_name"`
+- Adding a bot to the game - `\rcon addbot "bot_name" "skill_level [1-5]"`
+

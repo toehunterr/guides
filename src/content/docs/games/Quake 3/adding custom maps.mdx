@@ -1,0 +1,31 @@
+---
+title: Q3 Arena Adding Custom Maps
+description: Learn how to add pak0 files to your Quake 3 Arena server.
+sidebar:
+  label: Add Custom Maps
+---
+
+Quake 3 Arena has lots of great base maps, but sometimes you want something different. In this guide, I'll show you how to add custom maps to your Quake 3 Arena server.
+
+Some websites that have custom Quake 3 Arena maps include:
+- [lvlworld](https://lvlworld.com/)
+- [mapraider](https://www.mapraider.com/maps/quake-3-arena)
+- [quake.okayfun](http://quake.okayfun.com/maps/)
+
+:::caution
+Players must have `cl_allowDownload 1` set to be able to join a server with custom maps or have `Allow Downloading` turned on under `Setup > Options`. **This MUST also be set for any mods they play**, so load the mod first, and then run the command or turn to Allow Downloading.
+:::
+
+## How to Add Maps
+
+1. Download the maps you want. These should be in a .pk3 format.
+2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+3. Select your Quake 3 Arena server.
+4. In the sidebar click on `Management > File Manager`.
+5. Navigate to the `.q3a/baseq3` folder.
+6. Here, upload your custom map .pk3 file. You can drag and drop the file from your local computer, or use an FTP client to upload the file.
+7. Restart your server.
+
+After you restart your server, you can then load the map straight from the server console. For example, if your custom map was called `2fastcomp003.pk3`, you would type `map 2fastcomp003` into the server console and press enter.
+
+Once you have uploaded your maps, you will need to create a map cycle or levels config.
