@@ -1,0 +1,25 @@
+---
+title: 7D2D Change Maps
+description: Learn how to change the map on your 7D2D server.
+sidebar:
+  label: Change Maps
+---
+
+Here is how you can change your 7D2D version for both your server and game client.
+
+## Change 7D2D Server Version
+
+Changing the server version is only avaliable with 7D2D Vanilla versions. As mods only work with specific versions of 7D2D, we enforce those server versions for those particular mods.
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Click on your 7D2D server and stop the server.
+3. Go to `Managment > File Manager` and delete all the folders and files.
+4. Open the `serverconfig.xml` file.
+6. Look for the `GameWorld` line and change the map to one of the following.
+
+- Navezgane - The default map.
+- RWG - Randomly generates a new map according to the WorldGenSeed.
+
+If you're using RWG then you will need to change `WorldGenSeed` and `WorldGenSize`. Bigger map sizes will take long to generate and you may need a higher ram plan if it fails.
+
+7. Save and restart your server.
