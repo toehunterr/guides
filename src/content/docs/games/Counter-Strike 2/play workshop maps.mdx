@@ -24,8 +24,8 @@ Currently there is a CS2 bug where some workshop collections won't load. You can
 :::
 
 **Here is what you need:**
-- Workshop Collection with maps you want to use
-- A Steam API Key ([get it from here](http://steamcommunity.com/dev/apikey))
+- Workshop Collection ID with maps you want to use
+- An active GSLT
 
 Let's first create the collection.
 
@@ -33,11 +33,9 @@ Let's first create the collection.
 2. Click `Create Collection` and add the maps you want to that collection.
 3. Get the Collection ID from the URL (using the same method as getting the map ID)
 4. Go to your server [Game Host Bros Panel](https://panel.gamehostbros.com/) and select `Configuration > Startup Parameter`
-5. Look for `API Authentication Key` and put your Steam API key in there.
-6. Make sure `Workshop Type` is set to `Workshop Collection`
+5. Make sure `Workshop Type` is set to `Workshop Collection`
 ![workshop collection ID](../../../../assets/guide-images/workshop-collection-id.png)
-7. Select `Workshop ID`, and put your Collection ID in there.
-8. Restart the server.
+6. Select `Workshop ID`, and put your Collection ID in there and restart your server.
 
 After that, simply restart the server and all the maps will be available. Type `ds_workshop_listmaps` in your console to check.
 
@@ -52,10 +50,8 @@ If you want to play a single workshop map with friends, you only need to know th
 If you always want to load this map, then follow these steps.
 
 1. Go to your server in the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select `Configuration > Startup Parameters`.
-2. Look for `API Authentication Key` and put your Steam API key in there.
-3. Make sure `Workshop Type` is set to `Single Workshop Map`.
-4. Select Workshop ID, and put your map ID in there.
-5. Restart the server.
+2. Make sure `Workshop Type` is set to `Single Workshop Map`.
+3. Select Workshop ID, and put your map ID in there and restart the server.
 
 ## How To Update Workshop Maps
 
