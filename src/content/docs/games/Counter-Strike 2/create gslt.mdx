@@ -3,6 +3,9 @@ title: CS2 Create GSLT (Steam Game Server Login Token)
 description: Learn how to create a GSLT for your CS2 server.
 sidebar:
   label: Create Game Server Login Token
+  badge:
+    text: Important
+    variant: caution
 ---
 
 Here is how you create a GSLT for CS2 and add it to your server. This is **required** by Valve to be displayed in the server list.
@@ -14,6 +17,23 @@ Here is how you create a GSLT for CS2 and add it to your server. This is **requi
 5. Enter your token under `Game Server Login Token`. 
 6. Click `Console` in the sidebar and then restart your server.
 
-:::note
 If you have the error `Cert request for invalid failed with reason code 5005.  We're not logged into Steam`, that means your token is invalid and may need to be generated again.
+
+:::note
+Each CS2 server you run requires its own GSLT.
 :::
+
+## Requirements for Making a GSLT
+Valve has some guidelines on what accounts are able to create a Game Server Login Token.
+
+- Your Steam account must not be currently community banned or locked.
+- Your Steam account must not be limited.
+- Your Steam account must have a qualifying registered phone.
+- Your Steam account must own the game for which you are creating a game server account.
+- Your Steam account may create 1000 game server accounts.
+
+## GSLT Bans
+
+In the past, Valve has token banned server owners that have used plugins that grant users special weapon skins, knifes or ranks. This means you can no longer host servers from your account, and you will be temporarily banned from Competitive mode. We strongly suggest you view Valves [Terms of Service](https://help.steampowered.com/en/faqs/view/07AF-502E-A104-BD4B) to see what is an isn't allowed.
+
+If your GSLT is banned then you will need to use another Steam account to generate tokens in the future.
