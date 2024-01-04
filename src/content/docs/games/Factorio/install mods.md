@@ -1,0 +1,39 @@
+---
+title: Factorio Install Mods
+description: Learn how to install mods and plugins on your Factorio server.
+sidebar:
+  label: Install Mods
+---
+
+In this guide you will learn how to install Factorio mods manually and using the Game Host Bros Mod Manager. You can download mods from [https://mods.factorio.com/](https://mods.factorio.com/).
+
+## Installing Factorio Mods With Our Mod Manager
+
+We already have some popular overhaul mods available on our 1-Click Mod Manager. This is the fastest way to get a modified server up and running.
+
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Select your server.
+3. In the left-hand menu, click `Tools > Mod Manager`.
+4. Click the Install button for the mod you want then restart the server.
+
+After the mods have been installed on your Factorio server, you can simply connect to your server, and it will prompt you to install the missing mods automatically.
+
+:::danger
+Some mods may say `Something went wrong while trying to perform this action.` when you install them. This can safely be ignored.
+:::
+
+## Manually Installing Factorio Mods
+
+If the Factorio mod you want to play isn't listed in our Mod Manager, installing them on your server is quite straight forward.
+
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Select your server.
+3. In the left-hand menu, click `Management > File Manager`.
+4. Open the `Mods` folder
+5. Drag the mods you want to add into this file and restart the server.
+
+Like our 1-Click mods, you can simply join the server afterwards, and it will automatically download them to your game client.
+
+:::caution
+Make sure you install All the dependencies the mod requires. This is listed on the mod download page. On [https://mods.factorio.com/](https://mods.factorio.com/) you will find them on the `Downloads` tab under `Dependencies`. They're listed in blue.
+:::
