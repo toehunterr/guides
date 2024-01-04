@@ -1,0 +1,59 @@
+---
+title: CS2 Config Files
+description: Learn how to edit your config files on your CS2 server.
+sidebar:
+  label: Config Files
+---
+
+In this guide you will learn how to edit the different Counter-Strike 2 config files such as `server.cfg`, `gamemode_server.cfg` and exactly what each one is for.
+
+## Main Configs in CS2
+By default, **the configuration files listed below will control 99% of the things you need to do on your server**. Here is an overview of each file and what commands/convars should go where. You can edit these files by going to `Managment > File Manager`.
+
+:::danger
+**Don't** go online and copy someone else's entire config file. Only use what you need. When it comes to configuration, **less is more**.
+:::
+
+### server.cfg
+**Default location:** `/game/csgo/cfg/server.cfg`
+
+The `server.cfg` file is mostly only used for changing server related settings like game mechanics, physics, and other aspects that affect all players in the server (`sv_` convars). Examples include `sv_cheats`, which allows or disallows the use of cheat commands, and `sv_gravity`, which sets the gravity level in the server. 
+
+Unlike previous Counter-Strike games, your `server.cfg` file should rarely be edited.
+
+### gamemode_server.cfg
+**Default location:** `/game/csgo/cfg/gamemode_casual_server.cfg`
+
+All your custom gameplay commands go into your `_server` config files. These are different for each [Game Mode](/games/counter-strike-2/game-modes/) you're using. 
+
+These configs are for specific multiplayer settings (`mp_`, `bot_` convars). They're used to configure aspects of the game that are relevant in a multiplayer context, such as round timers, team balancing, and win conditions. For example, `mp_roundtime` sets the duration of each round, and `mp_maxrounds` determines the maximum number of rounds in a match.
+
+Here is a list of all the CS2 Game Modes and their respective config.
+
+| Game Mode     | Config                                |
+|---------------|---------------------------------------|
+| Casual        | gamemode_casual_server.cfg            |
+| Co-op Strike  | gamemode_coopmission_server.cfg       |
+| Competitive   | gamemode_competitive_server.cfg       |
+| Custom        | gamemode_custom_server.cfg            |
+| Deathmatch    | gamemode_deathmatch_server.cfg        |
+| Demolition    | gamemode_demolition_server.cfg        |
+| Guardian      | gamemode_cooperative_server.cfg       |
+| Training Day  | gamemode_new_user_training.cfg        |
+| Training      | gamemode_training_server.cfg          |
+| Weapons Expert| gamemode_competitive_server.cfg       |
+| Wingman       | gamemode_competitive2v2_server.cfg    |
+
+### mapcycle.txt
+**Default location:** `/game/csgo/mapcycle.txt`
+
+The `mapcycle.txt` file is where you can edit the CS2 map rotation. By default, we have added all the default maps, so you can just delete the maps you don't need from the config. 
+
+## Plugin Config Files
+**Default location:** `/game/csgo/addons/counterstrikesharp/configs`
+
+If you're using [CS2 plugins](/games/counter-strike-2/install-plugins/) such as CounterStrikeSharp, each plugin you install should generate a config file inside the CounterStrikeSharp plugin folder. Some plugins may put their config file in `/game/csgo/addons/counterstrikesharp/plugins`. If you're in doubt, you'll need to refer to the plugin authors documentation.
+
+## Finding Convars & Commands
+
+If you ever need to find a convar or command, you can simply go to your servers console and type `find` followed by what you're looking to change. For example if you wanted to find a command about listing workshop maps, you can simply type `find workshop`, and it will output all the current convars, commands along with a description of what they all do. 
