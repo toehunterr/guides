@@ -28,7 +28,9 @@ We have some CounterStrikeSharp plugins already added to our 1-click Mod Manager
 3. In the left-hand menu, click `Management > File Manager`.
 4. Open the `minqlx-plugins` folder.
 5. Drag your plugin .py file inside.
-6. Restart your server.
+6. In the left-hand menu, click `Configuration > Startup Parameters`.
+7. Look for MinQLX Plugins and add your plugin name to the end of the list.
+8. Restart your server.
 
 Please make sure to follow the instructions for each plugin as some need extra dependencies added to `minqlx-plugins/requirements.txt`. This file is checked every time your server is started with the MinQLX mod enabled.
 
