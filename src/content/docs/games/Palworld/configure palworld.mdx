@@ -5,18 +5,21 @@ sidebar:
   label: Configure Your Server
 ---
 
-Here is how you can locate and configure your Palworld Server
-
-## Navigating to the directory
-Palworld has multiple configuration files that are shipped with the servers, these configuration files can be accessed by navigating to the below location on your service.
+Here is how you can locate the config file for your Palworld server.
 
 1. Firstly, login to the [GameHostBros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service
 2. Once on your Palworld Service, ensure you stop it before proceeding.
-3. Once stopped, on the left, navigate to 'Management' then 'File Manager'.
-3. Inside of the File Manager, navigate to the 'Pal' folder, then 'Saved', then 'Config' and finally 'LinuxServer', inside of this directory you will find all of the required configuration files to get your server running!
+3. Once stopped, on the left, navigate to `Management` then `File Manager`.
+4. Inside the File Manager, open the file `DefaultPalWorldSettings.ini`.
+5. Copy the contents and navigate to `/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini`.
+6. Paste everything into `PalWorldSettings.ini` but remove the text `PublicPort=8211,PublicIP="",`.
 
-The main configuration file is labelled 'PalWorldSettings.ini', if you have never configured this service before it will be empty, to populate it, navigate back to the directory and into the file labelled 'DefaultPalworldSettings.ini'.
-Once there, simply copy the contents of this file and paste them into the 'PalWorldSettings.ini' file.
+Alternatively you can copy this below and paste it directly into PalWorldSettings.ini
 
-Once completed, press save and configure away!
+```
+[/Script/Pal.PalGameWorldSettings]
+OptionSettings=(Difficulty=None,DayTimeSpeedRate=1.000000,NightTimeSpeedRate=1.000000,ExpRate=1.000000,PalCaptureRate=1.000000,PalSpawnNumRate=1.000000,PalDamageRateAttack=1.000000,PalDamageRateDefense=1.000000,PlayerDamageRateAttack=1.000000,PlayerDamageRateDefense=1.000000,PlayerStomachDecreaceRate=1.000000,PlayerStaminaDecreaceRate=1.000000,PlayerAutoHPRegeneRate=1.000000,PlayerAutoHpRegeneRateInSleep=1.000000,PalStomachDecreaceRate=1.000000,PalStaminaDecreaceRate=1.000000,PalAutoHPRegeneRate=1.000000,PalAutoHpRegeneRateInSleep=1.000000,BuildObjectDamageRate=1.000000,BuildObjectDeteriorationDamageRate=1.000000,CollectionDropRate=1.000000,CollectionObjectHpRate=1.000000,CollectionObjectRespawnSpeedRate=1.000000,EnemyDropItemRate=1.000000,DeathPenalty=All,bEnablePlayerToPlayerDamage=False,bEnableFriendlyFire=False,bEnableInvaderEnemy=True,bActiveUNKO=False,bEnableAimAssistPad=True,bEnableAimAssistKeyboard=False,DropItemMaxNum=3000,DropItemMaxNum_UNKO=100,BaseCampMaxNum=128,BaseCampWorkerMaxNum=15,DropItemAliveMaxHours=1.000000,bAutoResetGuildNoOnlinePlayers=False,AutoResetGuildTimeNoOnlinePlayers=72.000000,GuildPlayerMaxNum=20,PalEggDefaultHatchingTime=72.000000,WorkSpeedRate=1.000000,bIsMultiplay=False,bIsPvP=False,bCanPickupOtherGuildDeathPenaltyDrop=False,bEnableNonLoginPenalty=True,bEnableFastTravel=True,bIsStartLocationSelectByMap=True,bExistPlayerAfterLogout=False,bEnableDefenseOtherGuildPlayer=False,CoopPlayerMaxNum=4,ServerPlayerMaxNum=32,ServerName="Default Palworld Server",ServerDescription="",AdminPassword="",ServerPassword="",RCONEnabled=False,RCONPort=25575,Region="",bUseAuth=True,BanListURL="https://api.palworldgame.com/api/banlist.txt")
 
+```
+
+7. After you have made the changes you want, start the server. 
