@@ -5,7 +5,9 @@ sidebar:
   label: Upload Server/Co-op Save
 ---
 
-In this tutorial, we will guide you through the process of uploading an existing save file to your Palworld dedicated server.
+In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Palworld dedicated server.
+
+You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
 
 If you get stuck at any time, Game Host Bros offers free world transfers. Just reach out to a bro on [Discord)](https://discord.gg/FN4XgbAwzr)
 
@@ -13,15 +15,25 @@ If you get stuck at any time, Game Host Bros offers free world transfers. Just r
 If you're moving from a local Co-op save file, the host will have to start fresh. The saved data only applies to the externally connected players.
 :::
 :::danger
-You CANNOT transfer a Windows server save file onto our Linux servers. Your character saves will not work. Co-op save files are fine but you will have the issue listed above. 
+You CANNOT transfer a Windows server save file onto our Linux servers. Your character saves will not work. Co-op save files are fine, but you will have the issue listed above. 
 :::
 
-1. Go to `Appdata\Local\PAL\Saved\SaveGames` on your local computer and backup the file (You may need to allow hidden folders under (View))
-2. Login to the Game Host Bros panel and stop your Palworld server.
+## Transfer from another Palworld dedicated server
+
+1. On your existing server, navigate to `PAL/Save/Savegame/0` and backup the folder with random numbers and letters.
+2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. In the Game Host Bros panel go to `Managment > File Manager`
 4. Once there navigate to `PAL/Save/Savegame/0`
-5. You will see a folder with a random number like 723687123871537817253, you need to copy your existing world into that folder.
+5. You will see a folder with a random number like 723687123871537817253, you need to copy your existing world data into that folder.
 
-Please note: To change these files correctly you must use a FTP program, such as FileZilla. 
+The folder with random numbers on your server must stay how it is. You only delete what is inside and then copy your existing world files in.
 
-The required filezilla server information can be found under STFP details.
+## Transfer from a Palworld Co-op save
+
+1. Go to `Appdata\Local\PAL\Saved\SaveGames` on your local computer and backup the file (You may need to allow hidden folders under (View))
+2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
+3. In the Game Host Bros panel go to `Managment > File Manager`
+4. Once there navigate to `PAL/Save/Savegame/0`
+5. You will see a folder with a random number like 723687123871537817253, you need to copy your existing world data into that folder.
+
+The folder with random numbers on your server must stay how it is. You only delete what is inside and then copy your existing world files in.
