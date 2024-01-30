@@ -1,0 +1,48 @@
+---
+title: Palworld RCON
+description: Learn how to use RCON on your Palworld server along with all the commands.
+sidebar:
+  label: RCON
+---
+
+This guide provides step-by-step instructions on how to set up and manage your Palworld server using RCON. This guide also assume you've already set up your [Palworldsettings.ini file](/games/palworld/configure-palworld/)
+
+:::caution
+By default, we don't allocate you an extra port for Palworld RCON. Simply contact support, and we will add this to your server for you. 
+:::
+
+## Enabling RCON
+
+To enable RCON on your Palworld server, follow these steps. 
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Once on your Palworld Service, ensure you stop it before proceeding.
+3. Once stopped, on the left, navigate to `Management` then `File Manager`.
+4. Inside the File Manager, open the file `/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini`.
+5. Edit these values
+
+RCONPort=255575
+RCONEnabled=True
+AdminPassword="yourpasswordhere"
+
+6. Start your server. 
+
+Make sure the RCON port is the port we provided you.
+
+## RCON Commands
+
+Here is a list of all the Palworld RCON commands
+
+| Command                  | Unique Description                                |
+|--------------------------|---------------------------------------------------|
+| `broadcast message_here` | Replace spaces with underscores in your message to prevent it from being truncated. |
+| `KickPlayer SteamID`     | Input the SteamID of the player you wish to remove from the server. |
+| `BanPlayer SteamID`      | Specify the SteamID of the player you intend to banish from the server. |
+| `ShowPlayers`            | Displays a list of all players currently active on the server. |
+| `Info`                   | Provides detailed information about the server's status. |
+| `Save`                   | Triggers an immediate save of the server's current state. |
+
+:::note
+There is also the commands `DoExit` & `Shutdown`, but we don't recommend using them on our servers.
+:::
+
