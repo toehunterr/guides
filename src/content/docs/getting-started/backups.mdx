@@ -17,5 +17,5 @@ By default, we give you space to backup your server incase you need to rollback 
 It will then start a backup. During this time your server will be shut down until the backup is finished.
 
 :::note
-There are some files we don't back up such as `.log` files or `.vpk` files. The reason for this is they're of no use in most cases and place unnessecery load on our servers. If you require these files you will need to create your own backup solution. We can help you get this setup so its all automated and suits your needs.
+In most cases we only backup critical save game files and configuration files. This differs for each game. The reason for this is most files are of no use in most cases and place unnessecery load on our servers. You can see what is included by performing a backup of your server instance and then downloading it. If you require every file in your server instance, you will need to create your own backup solution using SFTP and a service like [Multcloud](https://www.multcloud.com/).
 :::
