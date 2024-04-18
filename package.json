@@ -15,6 +15,6 @@
     "astro": "^4.6.2",
     "astro-robots-txt": "^1.0.0",
     "sharp": "^0.33.3",
-    "starlight-links-validator": "^0.5.3"
+    "starlight-links-validator": "^0.8.0"
   }
 }
