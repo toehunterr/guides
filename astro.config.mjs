@@ -17,7 +17,7 @@ export default defineConfig({
       baseUrl: 'https://github.com/Game-Host-Bros/guides/edit/main/',
     },
     customCss: ['./src/styles/custom.css'],
-    favicon: './src/assets/dark-logo.png',
+    favicon: 'favicon.ico',
     logo: {
       light: './src/assets/light-logo.png',
       dark: './src/assets/dark-logo.png',
