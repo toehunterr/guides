@@ -5,8 +5,30 @@ sidebar:
   label: Install Mods
 ---
 
+At Game Host Bros, we make it easy for you to mod your Palworld server by installing UE4SS automatically. This means you can install plugins and mods from sites like [Nexus Mods](https://www.nexusmods.com/palworld/mods/). In addition to this, we also have a few of the most popular mods added directly to our 1 click mod installer.
+
 :::danger
 Always back up your world manually before installing any Mods!
 :::
 
-While you are able to install Mods on your Palworld server manually using our File Manager, we don't recommended it due to how buggy and unpredictable the game is. 
+## Using our 1-Click Mod Installer
+
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Select your server.
+3. In the left-hand menu, click `Tools > Mod Manager`.
+4. Look for the plugin you want.
+5. Click the Install button then restart the server.
+
+Some plugins require additional configuration, so please check the URL provided with the mod for more information.
+
+## Installing Mods Manually
+
+1. Download the mods you want from [Nexus Mods](https://www.nexusmods.com/palworld/mods/). (Make sure they're server side mods!)
+2. Extract the downloaded `.zip` file on your PC.
+2. Access your Palworld server using [SFTP](/getting-started/uploading-files/).
+4. Navigate to `Pal/Binaries/Win64` and upload your extracted plugin folder.
+6. Start your server.
+
+:::danger
+`Pal/Binaries/Win64` is the most common folder for mods, however some Palworld mods may require a different location. Please check the documentation for the plugins you're downloading. If you're unsure or get stuck at any time, just reach out to a bro on [Discord)](https://discord.gg/FN4XgbAwzr) or via a support ticket.
+:::
