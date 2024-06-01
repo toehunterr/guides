@@ -1,0 +1,66 @@
+---
+title: Configure Your V Rising Server
+description: Learn how to configure your V Rising Server 
+sidebar:
+  label: Configure Your Server
+---
+
+In V Rising, there are 2 methods to configure your server. For basic settings you will edit everything from the Game Panel [Startup Parameters](/getting-started/beginners-guide/#edit-server-settings) screen. The other more advance way is to use the ServerGameSettings.json file.
+
+## How to create ServerGameSettings.json
+
+By default, this file is not created automatically. You need to use one of the base game files as a template to generate it or use the example file below.
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Click on your V Rising server.
+3. Go to `System > Console` and Stop your server.
+4. Click on `Management > File Manager.`
+5. Navigate to `VRisingServer_Data/StreamingAssets/GameSettingPresets` and look for a template that suits your desired settings.
+6. Click the 3 dots on the right-hand side of the file and click `Download`.
+7. After you've made your changes, navigate to `/save-data/Settings` and drag your modified file in.
+8. Rename it to `ServerGameSettings.json` and restart your server.
+
+:::tip[Did you know?]
+You have to leave the Game Settings Preset empty in Startup Parameters to use this file.
+:::
+
+:::danger
+Do NOT edit the files directly inside `VRisingServer_Data/StreamingAssets/GameSettingPresets` as they will be overwritten on an update.
+:::
+
+## ServerGameSettings.json Example File
+
+Here is an example of ServerGameSettings.json that you can use. It's based on the Standard PVP file.
+
+```json
+{
+  "GameModeType": "PvP",
+  "CastleDamageMode": "TimeRestricted",
+  "CastleHeartDamageMode": "CanBeDestroyedOnlyWhenDecaying",
+  "DeathContainerPermission": "Anyone",
+  "RelicSpawnType": "Unique",
+  "BloodBoundEquipment": true,
+  "PlayerDamageMode": "Always",
+  "PvPProtectionMode": "Short",
+  "SiegeWeaponHealth": "High",
+  "AnnounceSiegeWeaponSpawn": true,
+  "ShowSiegeWeaponMapIcon": false,
+  "BloodDrainModifier": 1.25,
+  "BatBoundItems": true,
+  "CastleStatModifiers_Global": {
+    "CastleLimit": 1
+  },
+  "WarEventGameSettings": {
+    "WeekdayTime": {
+      "StartHour": 8,
+      "EndHour": 2,
+      "EndMinute": 0
+    },
+    "WeekendTime": {
+      "StartHour": 8,
+      "EndHour": 2,
+      "EndMinute": 0
+    }
+  }
+}
+```
