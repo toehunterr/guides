@@ -1,0 +1,31 @@
+---
+title: How To Transfer A Local Save To Your Sons Of The Forest Server
+description: Step-by-step guide on how to upload your save file to your Sons Of The Forest server.
+sidebar:
+  label: Upload Save
+---
+
+In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Sons Of The Forest dedicated server.
+
+If you get stuck at any time, Game Host Bros offers free save transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
+
+:::warning
+You can only upload Multiplayer co-op worlds to a Sons Of The Forest server. **Single player worlds will not work**.
+:::
+
+## Locating your existing Sons Of The Forest save files
+To start we first need to get your existing save file from your local PC.
+
+1. Press `Win + R` on your keyboard to open the Run dialog.
+2. Copy and paste `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer` into the Run window and press OK.
+3. Here you will see a folder with random numbers, inside this folder you will find your `SaveData.zip`.
+
+## Uploading your existing Sons Of The Forest save to your server
+
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Sons Of The Forest server.
+2. In the Game Host Bros panel go to `Managment > File Manager`
+3. Once there navigate to `/serverconfig/Saves/DedicatedServer/Multiplayer/0000000001` and delete all the `SaveData.zip` inside (back this up if you want to save this world).
+4. [Upload](/getting-started/uploading-files/) your latest `SaveData.zip` file.
+5. Start your server.
+
+
