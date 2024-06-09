@@ -10,15 +10,22 @@ In this tutorial, we will guide you through the process of uploading an existing
 If you get stuck at any time, Game Host Bros offers free save transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
 
 :::warning
-You can only upload Multiplayer co-op worlds to a Sons Of The Forest server. **Single player worlds will not work**.
+You **MUST** convert any single player save to a multiplayer save on your local PC first before uploading it to your server. Doing this means the host doesn't keep their inventory so store it or give it to a friend first.
 :::
 
 ## Locating your existing Sons Of The Forest save files
 To start we first need to get your existing save file from your local PC.
 
 1. Press `Win + R` on your keyboard to open the Run dialog.
-2. Copy and paste `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer` into the Run window and press OK.
+2. Copy and paste `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\SinglePlayer` into the Run window and press OK.
 3. Here you will see a folder with random numbers, inside this folder you will find your `SaveData.zip`.
+
+## Convert your single player save to a multiplayer save.
+
+1. After you've completed the above and copied your `SaveData.zip` file, move it to `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer`.
+2. Open Sons of the forest and click `Multiplayer > Host Game > Continue > Load Game`, and select the world you want and click `Start`.
+3. Once in the game manually save the game using a Tarp or Tent and then close the game.
+4. Navigate to `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer` and copy the newly created save.
 
 ## Uploading your existing Sons Of The Forest save to your server
 

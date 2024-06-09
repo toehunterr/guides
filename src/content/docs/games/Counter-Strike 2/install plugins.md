@@ -1,5 +1,5 @@
 ---
-title: CS2 Install Plugins
+title: How To Install Plugins On CS2
 description: Learn how to install plugins your server.
 sidebar:
   label: Install Plugins
