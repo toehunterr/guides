@@ -1,0 +1,27 @@
+---
+title: How To Use RCON On Soulmask
+description: Learn how to use RCON on your Soulmask server along with all the commands.
+sidebar:
+  label: RCON
+---
+
+This guide provides step-by-step instructions on how to set up and manage your Soulmask server using RCON. This is a fairly new feature and is also sometimes referred to as TELNET in the Soulmask community.
+
+:::caution
+By default, we don't allocate you an external port for Soulmask RCON as it's insecure. Simply contact support, and we will add this to your server for you if needed. You can still use all commands directly from our web panel console.
+:::
+
+## RCON Commands
+
+| Command                         | Description                                                                                                                                                             |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| help                            | Shows all the current RCON commands.                                                                                                                                     |
+| quit/close/shutdown seconds     | After the number of seconds specified by the parameter, save and exit the game world.                                                                                    |
+| saveworld                       | Only save world archive without exiting.                                                                                                                                 |
+| backup new_database_name        | Back up the world archive to a database file with the specified name.                                                                                                    |
+| backuphour                      | Back up the world archive and name it with the current date and time (UTC), for example: YYYYmmddHH.db                                                                   |
+| dpp                             | Export the basic information of all accounts (account, role, union, level, total online time, creation time, etc.) to Saved/ALL_PLAYER_INFO.txt.                          |
+| setpm flag                      | Set the server login permission management switch (similar to the chmod command, 0 means turning off all permissions, 15 means turning on all permissions:               |
+| serverfps                       | Displays the average frame rate of the server over a short period of time.                                                                                               |
+| QueryInvitationCode             | Displays the server's Invitation Code.                                                                                                                                  |
+
