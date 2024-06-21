@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from "@astrojs/sitemap";
 import starlightLinksValidator from 'starlight-links-validator'
+import starlightImageZoom from 'starlight-image-zoom'
 
 import robotsTxt from "astro-robots-txt";
 
@@ -9,7 +10,10 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   site: 'https://guides.gamehostbros.com',
   integrations: [starlight({
-    plugins: [starlightLinksValidator()],
+    plugins: [
+      starlightLinksValidator(),
+      starlightImageZoom()
+    ],
     title: 'Game Host Bros Guides',
     description: 'Learn how to create the best game server with our easy to follow guides.',
     lastUpdated: true,
