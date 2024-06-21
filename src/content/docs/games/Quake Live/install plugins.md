@@ -1,5 +1,5 @@
 ---
-title: Quake Live Install Plugins
+title: How To Install Plugins On Your Quake Live Server
 description: Learn how to install plugins your Quake Live server using MinQLX.
 sidebar:
   label: Install Plugins
@@ -20,8 +20,6 @@ MinQLX is the framework that allows plugins to interface with Quake Live. By def
 You can toggle this off at any time if you need to revert back to the Vanilla QL version for any reason.
 
 ## Installing Plugins
-
-We have some CounterStrikeSharp plugins already added to our 1-click Mod Manager.
 
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Select your server.
